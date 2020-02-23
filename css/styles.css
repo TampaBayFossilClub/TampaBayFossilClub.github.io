@@ -30,6 +30,8 @@ nav li {
 nav a {
   font-weight: 900;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
 }
 
 .logo {
