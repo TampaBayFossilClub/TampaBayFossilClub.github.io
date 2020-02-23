@@ -11,9 +11,51 @@ body {
   text-align: center;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 7em;
+  text-align: left;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-top: 7em;
+  width: 95%;
+
+}
+
+/* typography */
+.title {
+  font-size: 2.5rem;
+}
+
+.title span {
+  font-weight: 300;
+  display: block;
+}
+
+@media (min-width: 60rem) {
+  .title{
+    font-size: 3.7rem;
+  }
+
+  .container{
+    margin-top: 5em;
+  }
+}
+
+/* header */
+
 header {
-  /*position: absolute;*/
-  margin: 1em;
+  position: absolute;
+  width: 100%;
+  margin-top: 1em;
 }
 
 nav ul {
@@ -32,8 +74,49 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: .8rem;
+  padding: .5em;
+  color: #000;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #DDD;
 }
 
 .logo {
   max-height: 12em
+}
+
+/* to account for different screen sizes */
+@media (min-width: 60rem) {
+  .logo{
+    float:left;
+  }
+
+  nav {
+    float: right;
+  }
+}
+
+/* home-message section */
+.home-messages {
+  /*background-color: grey;*/ /*add bg image here if desired*/
+  padding: 10em 0;
+
+}
+
+/* Calendar iFrame*/
+.cal {
+  margin-top: 1em;
+}
+
+/* footer */
+footer {
+  display:inline-block;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
+  text-align: center;
 }
