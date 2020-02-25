@@ -12,6 +12,8 @@ body {
   background-color: grey;
 }
 
+/* Images, Logos and Links */
+
 img {
   max-width: 100%;
   height: auto;
@@ -23,11 +25,34 @@ img {
   margin-left: 12em;
 }
 
+.YTlogo {
+  width: 4em;
+  padding: .5em;
+  margin-left: 12em;
+}
+
+.FossilFestlogo {
+  width: 7em;
+  padding: .5em;
+  margin-left: 10.8em;
+}
+
+.PeaceRiverAdvlogo {
+  width: 7em;
+  padding: .5em;
+  margin-left: 10.8em;
+}
+
+.logo {
+  max-height: 12em;
+}
+
 .links {
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
+  padding-bottom: 1.5em;
 }
 
 .links:hover,
@@ -35,6 +60,7 @@ img {
   color: blue;
 }
 
+/* Containers and whatnot */
 .container {
   width: 95%;
   margin: 0 auto;
@@ -75,7 +101,7 @@ img {
   }
 }
 
-/* header */
+/* header and nav */
 
 header {
   position: absolute;
@@ -101,17 +127,13 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: .8rem;
-  padding: .5em;
+  padding: .3em;
   color: #000;
 }
 
 nav a:hover,
 nav a:focus {
   color: #DDD;
-}
-
-.logo {
-  max-height: 12em;
 }
 
 /* to account for different screen sizes */
@@ -130,7 +152,6 @@ nav a:focus {
   background-color: tan; /*add bg image here if desired*/
   padding: 10em 0;
   padding-bottom: 1em;
-
 }
 
 .home-announcements {
@@ -139,7 +160,24 @@ nav a:focus {
 
 }
 
-@media (min-width: 60rem) {
+/* for specific mobile devices, the header will become two lines
+  we must account for where the messages will start when that happens */
+@media (max-width: 479px){ /* 480px is when header goes to 2 lines */
+  /* home-message section */
+  .home-messages {
+    background-color: tan; /*add bg image here if desired*/
+    padding: 13em 0;
+    padding-bottom: 1em;
+  }
+
+  .home-announcements {
+    background-color: tan; /*add bg image here if desired*/
+    padding: 1em 0;
+
+  }
+}
+
+@media (min-width: 60rem) { /* this accounts for larger screens */
   .home-messages {
     padding-right: 30%;
     width: 100vw;
@@ -149,30 +187,21 @@ nav a:focus {
     padding-right: 30%;
     width: 100vw;
   }
-
-
 }
 
 /* iFrames (calendar, Map, etc.)*/
 .cal {
   margin-top: 1em;
-  width: 400px;
-  height: 350px;
+  width: 80vw;
+  height: 50vh;
   margin-left: 2em;
 }
 
 .maps {
-  width: 350px;
-  height: 250px;
+  width: 50vw;
+  height: 30vh;
   margin: 3em;
   margin-top: 5em;
-}
-
-/* contains map, facebook, youtube embedded links */
-.info-area {
-  float: none;
-  display: inline-grid;
-  background-color: grey;
 }
 
 .meeting-description-text {
@@ -183,34 +212,53 @@ nav a:focus {
   margin-bottom: 1.5em;
 }
 
-.social-media {
-  display: flex;
-  margin-left: -12em;
-  background-color: blue;
+/* contains map, facebook, youtube embedded links */
+.info-area {
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
+/* contains map, facebook, youtube embedded links - for mobile */
+.info-area-mobile {
+  visibility: visible;
+  display: grid;
+  background-color: grey;
+}
+
+/* desktop views/larger views */
 @media (min-width: 60rem) {
   .cal {
     margin-top: 1em;
-    width: 450px;
-    height: 350px;
+    width: 26vw;
+    height: 40vh;
     margin-left: 2em;
   }
 
   .maps {
-    width: 350px;
-    height: 250px;
+    width: 20vw;
+    height: 20vh;
     margin-left: 5em;
     margin-top: 5em;
   }
 
   .info-area {
+    visibility: visible;
+    position: relative;
+    z-index: 100;
     float: right;
-    transform: translateY(-70em);
     width: 30vw;
+    height: 69.1em;
+    margin-top: 12.5em;
     display: inline-grid;
-    margin-bottom: -100vh;
-    background-color: #ccc;
+    margin-bottom: 0;
+    /*background-color: #ccc;*/
+  }
+
+  /* contains map, facebook, youtube embedded links */
+  .info-area-mobile {
+    visibility: hidden;
+    display: none;
   }
 
   .FBlogo {
@@ -219,10 +267,22 @@ nav a:focus {
     margin-left: 13.5em;
   }
 
-  .social-media {
-    display: flex;
-    margin-left: -12em;
-    background-color: red;
+  .YTlogo {
+    width: 4em;
+    padding: .5em;
+    margin-left: 13.8em;
+  }
+
+  .FossilFestlogo {
+    width: 7em;
+    padding: .5em;
+    margin-left: 12.5em;
+  }
+
+  .PeaceRiverAdvlogo {
+    width: 7em;
+    padding: .5em;
+    margin-left: 12.5em;
   }
 
 }
