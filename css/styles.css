@@ -113,6 +113,7 @@ img {
   .container{
     margin-top: 5em;
   }
+
 }
 
 /* header and nav */
@@ -133,7 +134,8 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin: 1em;
+  margin: .4em;
+  margin-top: 1em;
 }
 
 nav a {
@@ -271,7 +273,10 @@ nav a:focus {
 
 /* desktop views/larger views */
 @media (min-width: 60rem) {
-
+  nav li {
+    display: inline-block;
+    margin: 1em;
+  }
   .usgs-waterlevels{
     width: 40%;
     height: 40%;
