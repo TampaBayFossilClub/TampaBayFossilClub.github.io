@@ -102,7 +102,7 @@
         </div>
       </section>
 
-    
+
       <section class="home-announcements">
         <div class="announcements">
           <h1>Contact Us</h1>
@@ -111,24 +111,71 @@
             P.O. Box 280447 <br>
             Tampa, Florida 33682 <br><br>
 
-            Club e-mail address for general correspondence: <br>
-            <a href="mailto:info@tampabayfossilclub.com" class="links">
-              info@tampabayfossilclub.com</a>
-            <br><br>
-            Email links for more specific correspondence:<br />
-            <a href="mailto:president@tampabayfossilclub.com" class="links">
-                PRESIDENT</a><br>
-            <a href="mailto:membership_chairman@tampabayfossilclub.com" class="links">
-                MEMBERSHIP CHAIRMAN</a><br>
-            <a href="mailto:field_trip_chairman@tampabayfossilclub.com" class="links">
-                FIELD TRIP CHAIRMAN</a><br>
-            <a href="mailto:program_chairman@tampabayfossilclub.com" class="links">
-                PROGRAM CHAIRMAN</a><br>
-            <a href="mailto:show_chairman@tampabayfossilclub.com" class="links">
-                SHOW CHAIRMAN</a><br>
-            <a href="mailto:volunteer_chairman@tampabayfossilclub.com" class="links">
-                VOLUNTEER CHAIRMAN</a> <br>
+            <strong>GET IN TOUCH WITH US:</strong>
           </p>
+
+            <!-- Replace email list with contact form
+            <form action=”mailto:info@tampabayfossilclub.com”
+              method=”POST”
+              enctype=”multipart/form-data”
+              name=”EmailContactUsForm”>
+
+              Name:<br>
+              <input type=”text” size=”24″ name=”VisitorName”>
+              <br><br>
+              Message:<br>
+              <textarea name=”VisitorComment” rows=”4″ cols=”20″></textarea>
+              <br><br>
+
+              <input type=”submit” value=”Submit”> </form> -->
+
+        <div class="contact-form">
+          <form id="contactForm" method="post" action="php/send-contact-email.php">
+              <fieldset>
+                  <legend><strong>Contact Form</strong></legend>
+
+                  <div class="form-group">
+                      <label for="Name">Your Name:</label>
+                        <div class="input-group">
+                            <input type="text" id="Name" name="Name" class="form-control" placeholder="* Enter Name">
+                        </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="Email" >Your Email:</label>
+                        <div class="form-field">
+                            <input type="email" id="Email" name="Email" class="form-control" placeholder="* Enter Email">
+                        </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="Message" class="col-sm-2 control-label">Message:</label>
+                          <div class="form-field">
+                              <textarea id="Message" name="Message" class="form-control" rows="5"></textarea>
+                          </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <div align="center">
+                          <input type="checkbox" name="Consent" value="given"> I agree to be contacted via the email I provided in response to my message
+                      </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <div align="center">
+                      <!-- re-captcha -->
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div align="center">
+                        <input type="hidden" name="destination" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+                        <button type="submit" class="contactSubmitButton">Submit</button>
+                      </div>
+                  </div>
+
+              </fieldset>
+          </form>
         </div>
       </section>
     </div>
