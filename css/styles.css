@@ -19,6 +19,13 @@ img {
   height: auto;
 }
 
+
+
+.sig-font {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 20pt;
+}
+
 .YTPlaylist{
     max-width:560px;
     max-height:315px;
@@ -66,7 +73,7 @@ img {
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: #1E4C76;
   padding-bottom: 1.5em;
 }
 
