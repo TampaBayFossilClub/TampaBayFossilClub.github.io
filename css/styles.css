@@ -12,14 +12,16 @@ body {
   background-color: grey;
 }
 
+.updateBanner {
+  background-color: yellow;
+}
+
 /* Images, Logos and Links */
 
 img {
   max-width: 100%;
   height: auto;
 }
-
-
 
 .sig-font {
   font-family: 'Brush Script MT', cursive;
@@ -135,7 +137,6 @@ header {
 
 nav ul {
   margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -287,6 +288,11 @@ nav a:focus {
 
 /* desktop views/larger views */
 @media (min-width: 60rem) {
+  /* larger font size was requested for web view */
+  nav a {
+    font-size: 16pt;
+  }
+
   nav li {
     display: inline-block;
     margin: 1em;
