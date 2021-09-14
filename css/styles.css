@@ -41,14 +41,21 @@ img {
 .FBlogo {
   width: 4em;
   padding: .2em;
-  margin-left: 40%;
+  margin-left: 38%;
   margin-top: -.5em;
 }
 
 .YTlogo {
   width: 4em;
   padding: .2em;
-  margin-left: 6em;
+  margin-left: 1.6em;
+}
+
+.Instalogo {
+  width: 4em;
+  padding: .2em;
+  margin-left: 2em;
+  margin-top: -.5em;
 }
 
 .FossilFestlogo {
@@ -73,6 +80,14 @@ img {
   text-transform: uppercase;
   color: #1E4C76;
   padding-bottom: 1.5em;
+}
+
+.linksNoBr {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1E4C76;
+  padding-bottom: .3em;
 }
 
 .links:hover,
@@ -252,14 +267,14 @@ nav a:focus {
   margin-left: -8em;
 }
 
-/* contains map, facebook, youtube embedded links */
+/* contains map, facebook, youtube, instagram embedded links */
 .info-area {
   visibility: hidden;
   height: 0;
   width: 0;
 }
 
-/* contains map, facebook, youtube embedded links - for mobile */
+/* contains map, facebook, youtube, instagram embedded links - for mobile */
 .info-area-mobile {
   visibility: visible;
   display: grid;
@@ -380,6 +395,13 @@ nav a:focus {
   }
 
   .FBlogo {
+    width: 4em;
+    padding: .5em;
+    margin-left: 42%;
+    margin-bottom: -.5em;
+  }
+
+  .Instalogo {
     width: 4em;
     padding: .5em;
     margin-left: 42%;
