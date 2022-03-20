@@ -74,6 +74,18 @@ img {
   max-height: 12em;
 }
 
+.fflogo {
+  max-height: 0em;
+  visibility: hidden;
+}
+
+.fflogomobile {
+  width: 90%;
+  height: 40%;
+  visibility: visible;
+  margin-left: 5%;
+}
+
 .links {
   font-weight: 900;
   text-decoration: none;
@@ -306,12 +318,29 @@ nav a:focus {
   margin-left: 5%;
 }
 
+.body-img-mid {
+  width: 90%;
+  height: 40%;
+  margin-left: 5%;
+}
+
 /* desktop views/larger views */
 @media (min-width: 60rem) {
   nav li {
     display: inline-block;
     margin: 1em;
   }
+
+  .fflogo {
+    visibility: visible;
+    max-height: 12em;
+  }
+
+  .fflogomobile {
+    max-height: 0em;
+    visibility: hidden;
+  }
+
   .usgs-waterlevels{
     width: 40%;
     height: 40%;
@@ -327,6 +356,11 @@ nav a:focus {
 
   .body-img-sm {
     width: 25%;
+    margin-left: 0;
+  }
+
+  .body-img-mid {
+    width: 34%;
     margin-left: 0;
   }
 
