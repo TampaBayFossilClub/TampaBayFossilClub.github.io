@@ -12,6 +12,17 @@ body {
   background-color: grey;
 }
 
+h1 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 24pt;
+}
+
+h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18pt;
+  margin-bottom: 0;
+}
+
 /* Images, Logos and Links */
 
 img {
