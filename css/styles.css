@@ -152,6 +152,10 @@ img {
   background-color: yellow;
 }
 
+.emergencyUpdateBanner {
+  background-color: orange;
+}
+
 @media (min-width: 60rem) {
   .title{
     font-size: 3.7rem;
