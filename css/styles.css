@@ -30,7 +30,7 @@ img {
   height: auto;
 }
 
-.btn {
+button .btn {
   border: 2px solid black;
   border-color: #36454F;
   padding: 12px 40px;
