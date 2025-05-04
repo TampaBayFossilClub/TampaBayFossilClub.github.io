@@ -3,6 +3,35 @@
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177383491-1"></script>
+    <!-- EmailJS Capability -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "APG-MKonYqXgZ-_eP",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_23qqeee', 'template_w3is2n9', this)
+                    .then(() => {
+                        window.alert("Your Message has been Sent!");
+                        console.log('SUCCESS!');
+                        document.getElementById('contact-form').reset(); // Reset the form after successful submission
+                    }, (error) => {
+                        window.alert("There was an error sending your message. " + error);
+                        console.log('FAILED...', error);
+                        document.getElementById('contact-form').reset(); // Reset the form after successful submission
+                    });
+            });
+        }
+    </script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -70,8 +99,8 @@
         <div class="container">
           <h1>About Us</h1>
           <p>We hope you will feel at home here as you browse each section.
-            Please don't hesitate to contact us with questions or comments.
-            And if you're not already a member, what are you waiting for?!
+            Please don't hesitate to <a href="#contact" class="links">contact us</a> with questions or comments.
+            And if you're not already a member, what are you waiting for?! <a href="join.html" class="links">Join Us!</a>
             <br><br>
             The Tampa Bay Fossil Club is a family oriented organization focusing
             on paleontology, archaeology, and everything prehistoric.
@@ -132,13 +161,13 @@
           <h1>Follow Us on Instagram</h1>
             We now have an <a href="https://www.instagram.com/tampabayfossilclub/" class="links">Instagram</a> account!<br><br> Follow us for information on club
             events and see what our members are finding and doing by using <a href="https://www.instagram.com/tampabayfossilclub/tagged" class="links">#TampaBayFossilClub</a>
-            when you post your next fossil find or attend a club event!<br><br>Happy Hunting!
+            when you post your next fossil find or attend a club event!
         </div>
       </section>
 
 
       <section class="home-announcements">
-        <div class="announcements">
+        <div id="contact" class="announcements">
           <h1>Contact Us</h1>
           <p><strong>MEMBERSHIP AND GENERAL CORRESPONDENCE:</strong><br>
             Tampa Bay Fossil Club <br>
@@ -146,86 +175,26 @@
             Tampa, Florida 33682 <br><br>
 
             <strong>GET IN TOUCH WITH US:</strong>
-            <br> Message us on <a href="https://www.facebook.com/groups/101885010957/" class="links">Facebook</a>
-            <!--<br>
-               Club e-mail address for general correspondence:<br>
-               <a class="links" href="mailto:info@tampabayfossilclub.com">
-                   info@tampabayfossilclub.com
-               </a>
-               <br><br>
-             Email links for more specific correspondence:<br />
-             <a class="links" href="mailto:president@tampabayfossilclub.com">
-                 PRESIDENT
-             </a><br />
-             <a class="links" href="mailto:membership_chairman@tampabayfossilclub.com">
-                 MEMBERSHIP CHAIRMAN</a>
-             <br />
-             <a class="links" href="mailto:field_trip_chairman@tampabayfossilclub.com">
-                 FIELD TRIP CHAIRMAN</a>
-             <br />
-             <a class="links" href="mailto:program_chairman@tampabayfossilclub.com">
-                 PROGRAM CHAIRMAN</a>
-             <br />
-             <a class="links" href="mailto:show_chairman@tampabayfossilclub.com">
-                 SHOW CHAIRMAN</a>
-             <br />
-             <a class="links" href="mailto:volunteer_chairman@tampabayfossilclub.com">
-                 VOLUNTEER CHAIRMAN</a>
-             <br />-->
+            <br> Message us on <a href="https://www.facebook.com/groups/101885010957/" class="links">Facebook</a> or through the form below.
 
           </p>
 
-          <!-- Replace email list with contact form one day? -->
+          <p>Have a question or want more information? Send us a message and we'll respond as soon as we can!</p>
 
-<!-- Github Pages does not allow for PHP and thus cannot create form that sends email
-        <div class="contact-form">
-          <form id="contactForm" method="post" action="php/send-contact-email.php">
-              <fieldset>
-                  <legend><strong>Contact Form</strong></legend>
+            <form id="contact-form">
+                <label for="name"><strong>Your Name:</strong></label>
+                <input type="text" id="name" name="name" required><br>
 
-                  <div class="form-group">
-                      <label for="Name">Your Name:</label>
-                        <div class="input-group">
-                            <input type="text" id="Name" name="Name" class="form-control" placeholder="* Enter Name">
-                        </div>
-                  </div>
+                <label for="email"><strong>Your Email:</strong></label>
+                <input type="email" id="email" name="email" required><br>
 
-                  <div class="form-group">
-                      <label for="Email" >Your Email:</label>
-                        <div class="form-field">
-                            <input type="email" id="Email" name="Email" class="form-control" placeholder="* Enter Email">
-                        </div>
-                  </div>
+                <label for="message"><strong>Your Message:</strong></label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+<br>
+Please press the submit button only once.<br>A message will pop up indicating if your message was sent or not. <br><br>
+                <button class="btn" type="submit">Send Message</button>
+            </form>
 
-                  <div class="form-group">
-                      <label for="Message" class="col-sm-2 control-label">Message:</label>
-                          <div class="form-field">
-                              <textarea id="Message" name="Message" class="form-control" rows="5"></textarea>
-                          </div>
-                  </div>
-                  <br>
-                  <div class="form-group">
-                      <div align="center">
-                          <input type="checkbox" name="Consent" value="given"> I agree to be contacted via the email I provided in response to my message
-                      </div>
-                  </div>
-                  <br>
-                  <div class="form-group">
-                    <div align="center">
-                     add re-captcha here
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                      <div align="center">
-                        <input type="hidden" name="destination" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-                        <button type="submit" class="contactSubmitButton">Submit</button>
-                      </div>
-                  </div>
-
-              </fieldset>
-          </form>
-        </div>-->
       </section>
     </div>
 
