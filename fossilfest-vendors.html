@@ -3,6 +3,35 @@
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177383491-1"></script>
+    <!-- EmailJS Capability -->
+    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "APG-MKonYqXgZ-_eP",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_23qqeee', 'template_w3is2n9', this)
+                    .then(() => {
+                        window.alert("Your Message has been Sent!");
+                        console.log('SUCCESS!');
+                        document.getElementById('contact-form').reset(); // Reset the form after successful submission
+                    }, (error) => {
+                        window.alert("There was an error sending your message. " + error);
+                        console.log('FAILED...', error);
+                        document.getElementById('contact-form').reset(); // Reset the form after unsuccessful submission
+                    });
+            });
+        }
+    </script>-->
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -41,7 +70,6 @@
       <a href="meetings.html" class="links meeting-description-text">TBFC Meeting Location and Info</a>
       <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.870503024977!2d-82.41228485566599!3d28.062066600490873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c7c09ef786cd%3A0x9d47515423e4b8aa!2sBehavioral%20Sciences%20Building%2C%20Tampa%2C%20FL%2033620!5e0!3m2!1sen!2sus!4v1582476628124!5m2!1sen!2sus"></iframe>
 
-
       <a href="https://www.facebook.com/groups/101885010957/" class="FBlogo">
         <img src="img/f_logo_RGB-Hex-Blue_512.png" alt="Facebook Logo"></a>
       <a href="https://www.facebook.com/groups/101885010957/" class="links">Connect on Facebook</a>
@@ -69,100 +97,84 @@
     <div class="main-container">
       <section class="home-messages">
         <div class="container">
-          <h1>Fossil Information</h1>
-          <p>
-            Florida has a rich history that allows for many kinds of fossils
-            to be discovered from mammals of the Ice Age to
-            the sharks of the sea. The following links provide additional
-            information about fossils, Florida pre-history, and regulations.
-            <br><br>
-            Any fossil collecting on state owned lands in which vertebrate
-            fossils are found, aside from sharks teeth, require a
-            <a href="https://www.floridamuseum.ufl.edu/vertpaleo/amateur-collector/fossil-permit/" class="links">Fossil Permit</a>.
-            More about Fossil Permits and how they can be obtained can be found
-            through this link to the
-            <a href="https://www.floridamuseum.ufl.edu/vertpaleo/amateur-collector/fossil-permit/" class="links">
-              Florida Museum of Natural History </a>.
-            <br><br>
+          <h1>What is FossilFest?</h1>
+          <p>FossilFest is an annual amature fossil show hosted by the Tampa Bay Fossil Club for over 35 years - you can find more info about it on
+            our <a href="fossilfest.html" class="links">FossilFest Page</a>
           </p>
-          <h1>Helpful Links</h1>
-          <ul>
-            <li>Learn about Florida's pre-history: <br>
-              <a href="pre-history.html" class="links">
-                Florida's Fossil Story</a></li>
-                <br><br>
-            <li>Quick Reference: <br>
-              <a href="https://ucmp.berkeley.edu/help/timeform.php" class="links">
-                Geological Time Scale</a></li>
-                <br><br>
-            <li>Fossil Collecting and River Screening Tools: <br>
-              <a href="fossilequipment.html" class="links">
-                Fossil Equipment</a></li>
-                <br><br>
-            <li>The Fossil Project Social Paleontology Website (Replaces myFossil.org): <br>
-              <a href="https://www.floridamuseum.ufl.edu/fossilproject/" class="links">
-                The Fossil Project</a></li>
-          </ul>
 
-          <h1>Other Fossil Clubs</h1>
-			    <ul>
-                <li><a href="http://bellsouthpwp.net/l/v/lvlais/main.html" class="links">
-					  Birmingham Paleontological Society
-					</a></li> <br>
-                <li><a href="http://www.sdmg.org/" class="links">
-					  The San Diego Gem Mineral and Gem Society
-					</a></li> <br>
-                <li><a href="http://www.amfed.org/" class="links">
-					  America Federation of Mineralogical Societies
-					</a></li> <br>
-                <li><a href="http://www.floridafossilhunters.com/" class="links">
-					  Florida Fossil Hunters
-					</a></li> <br>
-                <li><a href="https://southwestfloridafossilsociety.org/" class="links">
-					  Southwest Florida Fossil Society
-					</a></li> <br>
-                <li><a href="http://www.esconi.org/" class="links">
-					  Paleontology Group, Earth Science Club of Northern Illinois
-					</a></li> <br>
-                <li><a href="http://www.calvertmarinemuseum.com/209/Fossil-Club" class="links">
-					  Calvert Marine Museum Fossil Club
-					</a></li> <br>
-                <li><a href="https://www.mdgeosociety.org/" class="links">
-					  Maryland Geological Society
-					</a></li><br>
-                <li><a href="http://mofossils.com/" class="links">
-					  Eastern Missouri Society of Paleontology
-					</a></li><br>
-                <li><a href="http://www.nyps.org/" class="links">
-					  New York Paleontological Society
-					</a></li><br>
-                <li><a href="http://www.ncfossilclub.org/" class="links">
-					  North Carolina Fossil Club
-          </a></li><br>
-                <li><a href="http://www.paleosoc.org/" class="links">
-					  The Paleontological Society
-					</a></li><br>
-                <li><a href="http://www.utexas.edu/tmm/sponsored_sites/aps/index.html" class="links">
-                      Austin Paleontological Society
-					</a></li><br>
-                <li><a href="http://www.dallaspaleo.org/" class="links">
-					  Dallas Paleontological Society
-					</a></li><br>
-                <li><a href="http://www.hgms.org/" class="links">
-					  Houston Gem and Mineral Society
-					</a></li><br>
-                <li><a href="http://www.utahpaleo.org/" class="links">
-					  Utah Friends of Paleontology
-					</a></li><br>
-			    </ul>
-        </div>
-      </section>
+          <h1>Vendor Information</h1>
+          <p> Vendors are what make our amature fossil show one of the largest in the region, possibly even the world!
+            <br>We hope you can join us for our 2026 show March 21 & 22. Vendor Setup starts at 1pm on Friday March 20.<br>
+            We are looking for vendors that specialize in Fossils, Gems, Minerals, Oddities, Lappidary, Jewlery, Shells, and Prehistoric or Ocean Themed Goods.<br>
+            <!--If you have any vendor questions you can send us a message through our
+            <a href="#contact" class="links">Vendor Questions</a> form<br><br>--></p>
+
+          <h2>Vendor Sign-Up:</h2>
+            <p>If you are interested in signing up as a vendor you can fill out this <a href="forms/TBFCFossilFest2026RegistrationFillableForm.pdf" class="links">Application Form</a>. <br>
+                There are instructions in the application for returning your application with your payment via check and snail mail, or through email with a credit or debit card.
+            </p>
+
+            <h2>Fossil, Gem, Jewlery, and Other Vendors</h2>
+            <p>
+            FossilFest has a number of vendors selling fossils from Florida and
+            afar, gems, antique bottles, bones, jewlery and more! There are always interesting
+            things to find at Fossil Fest thanks to our great Vendors!
+            <br><br>
+            <img src="img/fossilfest/vendorfossils.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+            <img src="img/fossilfest/vendorsharkteeth.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+
+            <img src="img/fossilfest/vendordisplays.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+
+            <img src="img/fossilfest/vendormegs.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+
+            <img src="img/fossilfest/vendorjewlery.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+
+            <img src="img/fossilfest/vendorjewlery2.JPG" alt=""
+                class="body-img-sm" style="padding: 0px 10px 0px 0px;">
+
+            <img src="img/fossilfest/vendorfish.JPG" alt=""
+                class="body-img" style="padding: 0px 10px 0px 0px;">
+
+            <br><br>
+
+            </p>
+
+       </section>
+<!--
+      <section class="home-announcements">
+        <div id="contact" class="announcements">
+          <h1>Vendor Questions</h1>
+
+            <p>Do you have a question or want more vendor related information? Send us a message and we'll respond as soon as we can!</p>
+
+            <form id="contact-form">
+                <label for="name"><strong>Your Name or Business:</strong></label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email"><strong>Your Email:</strong></label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message"><strong>Your Message:</strong></label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+<br>
+Please press the submit button only once.<br>A message will pop up indicating if your message was sent or not. <br><br>
+                <button class="btn" type="submit">Send Message</button>
+            </form>
+
+      </section>-->
     </div>
+
 
     <!-- Contains secondary nav section for calendar, maps, social media and
       links | should be part over every page in website | for Mobile Devices-->
     <div class="info-area-mobile">
       <a href="calendar.html" class="links meeting-description-text">TBFC Events Calendar</a>
+
       <iframe class="cal" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=NGU5cGM2cWJrYzVqbjhraDNwZ2VqZDlicGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%230B8043&amp;showTitle=1" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
 
       <a href="meetings.html" class="links meeting-description-text">TBFC Meeting Location and Info</a>
@@ -192,7 +204,7 @@
 
     <footer>
       <p>All content herein is owned by the Tampa Bay Fossil Club or it's
-        members. This entire site is copyright 2002-2025 Tampa Bay Fossil Club
+        members. This entire site is copyright 2002-2026 Tampa Bay Fossil Club
         -- All rights reserved.</p>
     </footer>
 
