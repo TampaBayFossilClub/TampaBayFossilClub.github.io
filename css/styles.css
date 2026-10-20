@@ -578,3 +578,178 @@ label {
 	position:relative;
 	top:1px;
 }
+
+/* Join and renewal page */
+.membership-section {
+  margin: 2em 0;
+  line-height: 1.6;
+}
+
+.membership-notice {
+  padding: 1em;
+  background: #f6eddd;
+  border-left: 4px solid #1e4c76;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1em;
+}
+
+.membership-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+  background: #f6eddd;
+  border: 1px solid #79674f;
+  border-radius: 5px;
+}
+
+.membership-card h3 {
+  margin: 0;
+}
+
+.membership-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: .5em 0 0;
+}
+
+.membership-payment {
+  display: block;
+  margin-top: auto;
+  padding: .75em 1em;
+  border: 2px solid #1e4c76;
+  border-radius: 5px;
+  background: #1e4c76;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.membership-payment:disabled {
+  background: #e2ddd4;
+  border-color: #796f61;
+  color: #51493e;
+  cursor: not-allowed;
+}
+
+.membership-payment[href]:hover {
+  background: #163955;
+}
+
+.membership-payment:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+.membership-instructions {
+  padding-left: 1.5em;
+}
+
+.membership-instructions li {
+  margin-bottom: 1em;
+}
+
+.membership-benefits {
+  padding-left: 1.5em;
+}
+
+.membership-benefits li {
+  padding-left: .25em;
+  margin-bottom: 1.25em;
+}
+
+.membership-benefits li::marker {
+  color: #1e4c76;
+}
+
+/* Keep membership content within the main column beside the desktop sidebar. */
+.join-page .home-messages {
+  width: 100%;
+}
+
+.join-page .membership-section {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.join-page .membership-card {
+  min-width: 0;
+}
+
+.join-page .membership-payment {
+  width: 100%;
+  min-height: 44px;
+  white-space: normal;
+}
+
+/* Match the existing narrow-phone breakpoint. */
+@media (max-width: 479px) {
+  .join-page .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .join-page .membership-card {
+    padding: 1em;
+  }
+
+  .join-page .membership-notice {
+    padding: .75em;
+  }
+
+  .join-page .membership-section h2 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Square checkout return page: a centered layout without the sidebar. */
+.membership-thank-you-main {
+  min-height: 100vh;
+  padding: 20em 1em 3em;
+  background: tan;
+}
+
+.membership-thank-you-card {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: clamp(1em, 4vw, 2.5em);
+  background: #f6eddd;
+  border: 1px solid #79674f;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.membership-thank-you-eyebrow {
+  color: #1e4c76;
+  font-weight: 700;
+}
+
+.membership-thank-you-card .membership-payment {
+  margin-top: 1.5em;
+}
+
+.membership-return-cancel {
+  min-height: 44px;
+  padding: .75em 1em;
+  background: #1e4c76;
+  font: inherit;
+  box-shadow: none;
+}
+
+.membership-return-cancel:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+@media (min-width: 60rem) {
+  .membership-thank-you-main {
+    padding-top: 16em;
+  }
+}

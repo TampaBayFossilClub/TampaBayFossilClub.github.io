@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Thank You for Joining Us | Tampa Bay Fossil Club</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/membership-thank-you.js" defer></script>
+  </head>
+  <body class="membership-thank-you-page">
+    <header>
+      <a href="index.html"><img src="img/LogoBlurred.png" alt="Tampa Bay Fossil Club home" class="logo"></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="fieldtrips.html">Field Trips</a></li>
+          <li><a href="fossilinfo.html">Fossil Info</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="membership-thank-you-main">
+      <section class="membership-thank-you-card" aria-labelledby="thank-you-title">
+        <p class="membership-thank-you-eyebrow">Tampa Bay Fossil Club</p>
+        <h1 id="thank-you-title">Thank You for Supporting the Club!</h1>
+        <!-- This static return page cannot verify a Square transaction or a Tally submission.
+             Configure it as the post-payment redirect for every membership payment link. -->
+        <p>Thank you for submitting your membership application and completing checkout.
+          Whether you are joining for the first time or renewing, we look forward to another year
+          of fossil discoveries with you!</p>
+        <p>Please keep your Square payment confirmation for your records. The club will match
+          completed payments with membership applications. If you did not finish the application
+          or payment, please <a href="about.html#contact" class="links">contact us</a> for help.</p>
+        <h2>More Adventures Ahead</h2>
+        <p>Explore our <a href="fieldtrips.html" class="links">Field Trips</a> page or plan your next
+          <a href="meetings.html" class="links">club meeting</a>. We look forward to seeing you!</p>
+        <a href="index.html" class="membership-payment">Go to the Home Page</a>
+        <div id="membership-return" hidden>
+          <p>You will return to the home page automatically in 30 seconds.</p>
+          <button type="button" id="cancel-membership-return" class="membership-return-cancel">Stay on this page</button>
+          <p id="membership-return-status" role="status"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
