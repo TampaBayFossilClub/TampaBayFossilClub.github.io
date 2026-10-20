@@ -707,11 +707,9 @@ label {
   }
 }
 
-/* Square checkout return page: a centered layout without the sidebar. */
-.membership-thank-you-main {
-  min-height: 100vh;
-  padding: 20em 1em 3em;
-  background: tan;
+/* Center the return card within the standard page content column. */
+.membership-thank-you-main .home-messages {
+  width: 100%;
 }
 
 .membership-thank-you-card {
@@ -735,7 +733,14 @@ label {
   margin-top: 1.5em;
 }
 
-.membership-return-cancel {
+#membership-return-countdown {
+  display: block;
+  text-align: center;
+}
+
+.membership-return-cancel:not([hidden]) {
+  display: block;
+  margin-inline: auto;
   min-height: 44px;
   padding: .75em 1em;
   background: #1e4c76;
@@ -746,10 +751,4 @@ label {
 .membership-return-cancel:focus-visible {
   outline: 3px solid #000;
   outline-offset: 3px;
-}
-
-@media (min-width: 60rem) {
-  .membership-thank-you-main {
-    padding-top: 16em;
-  }
 }
